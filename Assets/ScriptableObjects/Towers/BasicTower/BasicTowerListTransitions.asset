@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02094a755ea5045458cc87d4fd135f3d, type: 3}
+  m_Name: BasicTowerListTransitions
+  m_EditorClassIdentifier: 
+  _stateTransitions:
+  - {fileID: 11400000, guid: 2026c19e0d0970f4c88b326ab5866be5, type: 2}
+  - {fileID: 11400000, guid: b8f027decff9bd847afcfbcc6f4efe6a, type: 2}
+  - {fileID: 11400000, guid: 5f89bbf9edd394448b16f187ba524d55, type: 2}
+  - {fileID: 11400000, guid: 8a133d428ebe27341be102adc2b474c7, type: 2}
+  - {fileID: 11400000, guid: 94b07a37151d3fb4c81648feba44c6eb, type: 2}
+  - {fileID: 11400000, guid: b3fe26b8d6906164695f2d171b629dbc, type: 2}
+  - {fileID: 11400000, guid: 16579e3a4ea7e6e45b6435c5f6dc8719, type: 2}

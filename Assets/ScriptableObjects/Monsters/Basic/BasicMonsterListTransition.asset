@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02094a755ea5045458cc87d4fd135f3d, type: 3}
+  m_Name: BasicMonsterListTransition
+  m_EditorClassIdentifier: 
+  _stateTransitions:
+  - {fileID: 11400000, guid: 2e46178580dc7854b97e5ce296abdc4c, type: 2}
+  - {fileID: 11400000, guid: bbf640181b7024a45914eecce98bbfd2, type: 2}
+  - {fileID: 11400000, guid: 7eebb8c833cc8ff46b1a02514d991779, type: 2}
+  - {fileID: 11400000, guid: a13ee347f64f3704f81519f1eb098ac6, type: 2}

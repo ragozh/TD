@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b64959f22a4bc4b96687c180bea1da, type: 3}
+  m_Name: MovingToWaitingForDestination
+  m_EditorClassIdentifier: 
+  _transitionItem:
+    FromState: {fileID: 11400000, guid: 2f89afaebbba71840ac9c154b983591e, type: 2}
+    ToState: {fileID: 11400000, guid: f108ab46e4857e54f8aa788f37fd1c57, type: 2}
+    ConditionUsages:
+    - ExpectedResult: 0
+      Condition: {fileID: 11400000, guid: f8667af63ee62964abdacd617f43c073, type: 2}
+      Operator: 0
