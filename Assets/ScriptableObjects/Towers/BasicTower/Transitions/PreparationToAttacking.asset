@@ -10,9 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54b64959f22a4bc4b96687c180bea1da, type: 3}
-  m_Name: AttackingToAttackReady
+  m_Name: PreparationToAttacking
   m_EditorClassIdentifier: 
   _transitionItem:
-    FromState: {fileID: 11400000, guid: ac58b0156593fd24eb2c8d88a4cb0130, type: 2}
-    ToState: {fileID: 11400000, guid: efb1a0e466ca26a47aa6a74dd4e23a21, type: 2}
-    ConditionUsages: []
+    FromState: {fileID: 11400000, guid: efb1a0e466ca26a47aa6a74dd4e23a21, type: 2}
+    ToState: {fileID: 11400000, guid: ac58b0156593fd24eb2c8d88a4cb0130, type: 2}
+    ConditionUsages:
+    - ExpectedResult: 1
+      Condition: {fileID: 11400000, guid: 12e6a38f007c0a74ebed83cff8689132, type: 2}
+      Operator: 0

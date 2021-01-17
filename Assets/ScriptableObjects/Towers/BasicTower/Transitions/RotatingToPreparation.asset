@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54b64959f22a4bc4b96687c180bea1da, type: 3}
-  m_Name: SpawningToIdle
+  m_Name: RotatingToPreparation
   m_EditorClassIdentifier: 
   _transitionItem:
-    FromState: {fileID: 11400000, guid: 454331cc84c46b64dae4106bb76d26fe, type: 2}
-    ToState: {fileID: 11400000, guid: f9f9a6140e70b5c45915b205b01a06f6, type: 2}
+    FromState: {fileID: 11400000, guid: d2996a80e6949dc43961eca96e124475, type: 2}
+    ToState: {fileID: 11400000, guid: efb1a0e466ca26a47aa6a74dd4e23a21, type: 2}
     ConditionUsages:
     - ExpectedResult: 0
-      Condition: {fileID: 11400000, guid: 43e0c26531a017245a00afb529368a0a, type: 2}
+      Condition: {fileID: 11400000, guid: 96e73d9b9c803fe4dab13b1800343d2a, type: 2}
+      Operator: 0
+    - ExpectedResult: 0
+      Condition: {fileID: 11400000, guid: fa40fb762ea886d468ab4a96d7aa980d, type: 2}
       Operator: 0

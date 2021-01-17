@@ -7,13 +7,13 @@ public class IsOnAttackingSO : StateConditionSO<IsOnAttacking> { }
 
 public class IsOnAttacking : Condition
 {
-    private BasicTowerData _data;
+    private TowerController _controller;
     public override void Awake(StateMachine stateMachine)
     {
-        _data = stateMachine.GetComponent<BasicTowerData>();
+        _controller = stateMachine.GetComponent<TowerController>();
     }
     protected override bool Statement()
     {
-        return _data.isOnAttacking;
+        return _controller.IsOnAttacking();
     }
 }

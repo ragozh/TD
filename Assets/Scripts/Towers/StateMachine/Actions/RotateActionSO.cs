@@ -8,16 +8,16 @@ public class RotateActionSO : StateActionSO<RotateAction> { }
 public class RotateAction : StateAction
 {
     private Transform _transform;
-    private BasicTowerData _data;
+    private TowerController _controller;
     public override void Awake(StateMachine stateMachine)
     {
         _transform = stateMachine.GetComponent<Transform>();
-        _data = stateMachine.GetComponent<BasicTowerData>();
+        _controller = stateMachine.GetComponent<TowerController>();
     }
     public override void OnUpdate()
     {
-        var target  = _data._currentTargetMonster.transform;
-        _transform.LookAt(new Vector3(target.position.x, _transform.position.y, target.position.z));
+        var targetTransform  = _controller.GetCurrentTargetTransform();
+        _transform.LookAt(new Vector3(targetTransform.position.x, _transform.position.y, targetTransform.position.z));
     }
 
     public override void OnStateExit()

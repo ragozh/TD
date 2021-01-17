@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5c089401059ea4595a2219a0530d72, type: 3}
-  m_Name: BasicTowerAttackReady
+  m_Script: {fileID: 11500000, guid: 960eb4d6870b1fc4681deb68b5d696ba, type: 3}
+  m_Name: BasicTowerAttackTimeElapsed
   m_EditorClassIdentifier: 
-  _actions: []
+  cacheResult: 1
+  timerLength: 1

@@ -25,15 +25,19 @@ public class TowerController : MonoBehaviour
 
     private void Update()
     {
-        GetCurrentTarget();
+        FindCurrentTarget();
     }
 
-    private void GetCurrentTarget()
+    private void FindCurrentTarget()
     {
         if (_data._currentTargetMonster)    return;
         ClearList(_data._listMonsterInRange);
         if (_data._listMonsterInRange.Count == 0)   return;
         _data._currentTargetMonster = _data._listMonsterInRange[0];
+    }
+    public Transform GetCurrentTargetTransform()
+    {
+        return _data._currentTargetMonster.transform;
     }
 
     private void ClearList(List<BasicMonsterController> list)
@@ -99,7 +103,6 @@ public class TowerController : MonoBehaviour
 
     private IEnumerator OnAttackStart()
     {
-        _data.isOnAttacking = true; // flag  to start an attack
         yield return null;
     }
 
@@ -111,16 +114,17 @@ public class TowerController : MonoBehaviour
     private IEnumerator OnAttackEnd()
     {
         yield return null;
-        _data.isOnAttacking = false; // flag  to end an attack
     }
-
     private IEnumerator DoAttack()
     {
-        yield return new WaitForSeconds(_attackDelay);
+        Debug.Log("hit");
+        yield return null;
     }
-
     public bool ShouldAttack()
     {
         return Time.time > _nextAttackTime;
     }
+    public bool IsOnAttacking() => _data.isOnAttacking;
+    public void SetAttacking() => _data.isOnAttacking = true;
+    public void SetNotAttacking() => _data.isOnAttacking = false;
 }
