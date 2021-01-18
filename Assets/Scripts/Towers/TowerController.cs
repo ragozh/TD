@@ -5,12 +5,9 @@ using UnityEngine;
 
 public class TowerController : MonoBehaviour
 {
-    private BasicTowerData _data = default;
-    
+    private BasicTowerData _data = default;    
     private CapsuleCollider _capsuleCollider;
-    // Attack parameters
-    private float _nextAttackTime = 0;
-    private float _attackDelay;
+    [SerializeField] private BulletPoolSO _bulletPool = default;
 
     private void Awake()
     {
@@ -84,18 +81,11 @@ public class TowerController : MonoBehaviour
 
     public void AttackAction()
     {
-        _attackDelay = (float) 1 / _data.AttackSpeed;
         StartCoroutine(Attack());
     }
 
     private IEnumerator Attack()
     {
-        if (!ShouldAttack())
-        {
-            yield break; 
-        }
-        _nextAttackTime = Time.time + _attackDelay;
-
         yield return StartCoroutine(OnAttackStart());
         yield return StartCoroutine(OnAttackContinue());
         yield return StartCoroutine(OnAttackEnd());
@@ -117,14 +107,18 @@ public class TowerController : MonoBehaviour
     }
     private IEnumerator DoAttack()
     {
-        Debug.Log("hit");
-        yield return null;
+        yield return new WaitForSeconds(_data.AttackPoint);
+        LaunchProjectile();
     }
-    public bool ShouldAttack()
+
+    private void LaunchProjectile()
     {
-        return Time.time > _nextAttackTime;
+        var bullet = _bulletPool.Request();
+        
     }
+
     public bool IsOnAttacking() => _data.isOnAttacking;
     public void SetAttacking() => _data.isOnAttacking = true;
     public void SetNotAttacking() => _data.isOnAttacking = false;
+    public float GetAttackTime() => (float) 1 / _data.AttackSpeed;
 }

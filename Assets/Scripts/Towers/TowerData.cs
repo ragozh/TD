@@ -5,6 +5,7 @@ public abstract class TowerData : MonoBehaviour
     public abstract float AttackDamage { get; set; }
     public abstract float AttackSpeed { get; set; }
     public abstract float AttackRange { get; set; }
+    public abstract float AttackPoint { get; set; }
 
     public virtual float RotationSpeed { get; set; }
 }

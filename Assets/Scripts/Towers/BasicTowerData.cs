@@ -7,6 +7,8 @@ public class BasicTowerData : TowerData
     [SerializeField] private float _attackDamage;
     [SerializeField] private float _attackSpeed;
     [SerializeField] private float _attackRange;
+    [SerializeField] private float _attackPoint;
+
     public override float AttackDamage
     {
         get => _attackDamage;
@@ -21,6 +23,11 @@ public class BasicTowerData : TowerData
     {
         get => _attackRange;
         set => _attackRange = value;
+    }
+    public override float AttackPoint
+    {
+        get => _attackPoint;
+        set => _attackPoint = value;
     }
 
     // Controller

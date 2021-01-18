@@ -14,9 +14,9 @@ public class AttackAction : StateAction
     }
     public override void OnUpdate()
     {
-        _controller.AttackAction();
     }
-    public override void OnStateExit()
+    public override void OnStateEnter()
     {
+        _controller.AttackAction();
     }
 }

@@ -9023,10 +9023,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackDamage: 10
-  _attackSpeed: 0.8
+  _attackSpeed: 2
   _attackRange: 2.5
+  _attackPoint: 0
   _listMonsterInRange: []
   _currentTargetMonster: {fileID: 0}
+  isOnAttacking: 0
 --- !u!65 &863478399
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9068,6 +9070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f025ba85facf744e89a8ebb9ae0ae4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bulletPool: {fileID: 11400000, guid: 82173d7c6bfd08747bbf7eddface583b, type: 2}
 --- !u!114 &863478403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22482,6 +22485,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2087105066736375909, guid: 55b1fa6348490f14f8a85a1f8f28def6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.38268343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087105066736375909, guid: 55b1fa6348490f14f8a85a1f8f28def6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087105066736375909, guid: 55b1fa6348490f14f8a85a1f8f28def6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087105066736375909, guid: 55b1fa6348490f14f8a85a1f8f28def6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.883
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087105066736375909, guid: 55b1fa6348490f14f8a85a1f8f28def6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.883
+      objectReference: {fileID: 0}
     - target: {fileID: 2087105068344159448, guid: 55b1fa6348490f14f8a85a1f8f28def6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.77

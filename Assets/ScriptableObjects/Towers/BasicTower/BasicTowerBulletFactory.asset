@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2eeeebc4a78e3244af186ac7f8036e3, type: 3}
-  m_Name: BasicTowerAttackTimeElapsed
+  m_Script: {fileID: 11500000, guid: cf3623f732536784187e6754abc53561, type: 3}
+  m_Name: BasicTowerBulletFactory
   m_EditorClassIdentifier: 
-  cacheResult: 1
-  timerLength: 1
+  _prefab: {fileID: 796799842, guid: caa6018ed7421d34f92fffeb2f3e1980, type: 3}
